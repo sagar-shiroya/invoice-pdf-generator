@@ -58,6 +58,13 @@ Contributions are what make the open-source community such an amazing place to l
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+
+## Screenshots
+<img width="969" alt="image" src="https://github.com/user-attachments/assets/9b1aa978-5aa6-4345-b372-fd343db75c3c" />
+<img width="596" alt="image" src="https://github.com/user-attachments/assets/c6f18945-e737-4fd0-af04-63544be7edf4" />
+
+
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
