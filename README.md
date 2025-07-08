@@ -1,4 +1,4 @@
-# Invoice Generator
+# Invoice PDF Generator
 
 A simple and powerful invoice generator built with React and Vite. Create, preview, and download professional invoices with ease.
 
