@@ -1,0 +1,27 @@
+/* General App Layout */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  width: 100%;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-footer {
+  width: 100%;
+  padding: 1rem;
+  background-color: #242424;
+  text-align: center;
+  color: #fcfcfc;
+  font-size: 0.9em;
+}
+
+.app-footer p {
+  margin: 0;
+}
