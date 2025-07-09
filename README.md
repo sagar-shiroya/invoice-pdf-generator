@@ -2,6 +2,10 @@
 
 A simple and powerful invoice generator built with React and Vite. Create, preview, and download professional invoices with ease.
 
+## 🚀 Live Demo
+
+Try the production-ready app here: **[https://invoice-pdf-generator-liard.vercel.app/](https://invoice-pdf-generator-liard.vercel.app/)**
+
 ## Features
 
 - **Dynamic Invoice Creation**: Add and remove items, and all calculations (subtotal, taxes, grand total) update in real-time.
