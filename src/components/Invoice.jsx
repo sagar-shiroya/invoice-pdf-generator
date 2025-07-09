@@ -80,6 +80,7 @@ const Invoice = () => {
   const [buyerGSTIN, setBuyerGSTIN] = useState('');
   const [buyerPAN, setBuyerPAN] = useState('');
   const [buyerState, setBuyerState] = useState('');
+  const [partyGSTIN, setPartyGSTIN] = useState('');
   const [invoiceNo, setInvoiceNo] = useState('');
   const [invoiceDate, setInvoiceDate] = useState('');
   const [challaNo, setChallaNo] = useState('');
@@ -129,6 +130,7 @@ const Invoice = () => {
       buyerGSTIN,
       buyerPAN,
       buyerState,
+      partyGSTIN,
       invoiceNo,
       invoiceDate,
       challaNo,
@@ -219,6 +221,7 @@ const Invoice = () => {
       setBuyerGSTIN(template.buyerGSTIN || '');
       setBuyerPAN(template.buyerPAN || '');
       setBuyerState(template.buyerState || '');
+      setPartyGSTIN(template.partyGSTIN || '');
       setBankName(template.bankName || '');
       setBankBranch(template.bankBranch || '');
       setBankAccount(template.bankAccount || '');
@@ -263,6 +266,7 @@ const Invoice = () => {
     setBuyerName(faker.person.fullName());
     setBuyerAddress(`${faker.location.streetAddress()}, ${faker.location.city()}, ${faker.location.state()} ${faker.location.zipCode()}`);
     setBuyerGSTIN(faker.string.alphanumeric(15).toUpperCase());
+    setPartyGSTIN(faker.string.alphanumeric(15).toUpperCase());
     setBuyerPAN(faker.string.alphanumeric(10).toUpperCase());
     setBuyerState(faker.location.state());
     setInvoiceNo(faker.number.int({ min: 1000, max: 9999 }).toString());
@@ -338,15 +342,18 @@ const Invoice = () => {
             </div>
           </div>
           <div className="invoice-ids">
-            <div>GSTIN No. <input className="input-medium" value={buyerGSTIN} onChange={e => setBuyerGSTIN(e.target.value)} /></div>
-            <div>PAN No. <input className="input-medium" value={buyerPAN} onChange={e => setBuyerPAN(e.target.value)} /></div>
-            <div>State <input className="input-short" value={buyerState} onChange={e => setBuyerState(e.target.value)} /></div>
+            <div>Company GSTIN: <input className="input-medium" value={buyerGSTIN} onChange={e => setBuyerGSTIN(e.target.value)} /></div>
+            <div>PAN No.: <input className="input-medium" value={buyerPAN} onChange={e => setBuyerPAN(e.target.value)} /></div>
+            <div>State: <input className="input-short" value={buyerState} onChange={e => setBuyerState(e.target.value)} /></div>
           </div>
           <div className="invoice-party">
             <div>
               Buyer Name & Address:
               <input className="input-long" placeholder="Party Name" value={buyerName} onChange={e => setBuyerName(e.target.value)} />
               <input className="input-long" placeholder="Address" value={buyerAddress} onChange={e => setBuyerAddress(e.target.value)} />
+            </div>
+            <div>
+              Buyer's GSTIN No.: <input className="input-medium" value={partyGSTIN} onChange={e => setPartyGSTIN(e.target.value)} placeholder="Enter Buyer's GSTIN" />
             </div>
           </div>
           <table className="invoice-table">

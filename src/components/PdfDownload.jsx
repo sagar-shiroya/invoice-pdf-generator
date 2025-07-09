@@ -189,7 +189,7 @@ const PdfDownload = ({ invoiceData, onDownloadComplete }) => {
           fontSize: '13px'
         }}>
           <span style={{ marginRight: '30px' }}>
-            <strong>GSTIN No.</strong> {invoiceData.buyerGSTIN}
+            <strong>Company's GSTIN:</strong> {invoiceData.buyerGSTIN}
           </span>
           <span style={{ marginRight: '30px' }}>
             <strong>PAN No.</strong> {invoiceData.buyerPAN}
@@ -207,13 +207,13 @@ const PdfDownload = ({ invoiceData, onDownloadComplete }) => {
           marginBottom: '20px' 
         }}>
           <div style={{ fontSize: '13px', marginBottom: '5px' }}>
-            <strong>Buyer Name & Address:</strong>
+            <strong>Buyer Name:</strong> {invoiceData.buyerName}
           </div>
-          <div style={{ fontSize: '13px', fontWeight: 'bold', marginBottom: '5px' }}>
-            {invoiceData.buyerName}
+          <div style={{ fontSize: '13px', marginBottom: '5px' }}>
+            <strong>Buyer Address:</strong> {invoiceData.buyerAddress}
           </div>
-          <div style={{ fontSize: '12px' }}>
-            {invoiceData.buyerAddress}
+          <div style={{ fontSize: '13px' }}>
+            <strong>Buyer's GSTIN:</strong> {invoiceData.partyGSTIN}
           </div>
         </div>
 
